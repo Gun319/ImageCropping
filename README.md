@@ -9,3 +9,5 @@
 # 预览 Preview
 ![image](https://github.com/user-attachments/assets/c3de2878-4309-4ec1-a61c-6b78a922429f)
 ![image](https://github.com/user-attachments/assets/e81cb63a-d503-4556-bd88-90d5c5e604bd)
+# 下载使用
+[ImageCropping](https://github.com/Gun319/ImageCropping/releases/download/Beta/ImageCropping.exe)
