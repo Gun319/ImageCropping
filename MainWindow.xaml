@@ -1,0 +1,61 @@
+﻿<Window
+    x:Class="ImageCropping.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ImageCropping"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="ImageCropping"
+    MinWidth="800"
+    MinHeight="450"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border Background="WhiteSmoke" CornerRadius="4">
+            <Canvas
+                x:Name="MainCanvas"
+                MouseDown="Canvas_MouseDown"
+                MouseMove="Canvas_MouseMove">
+                <Image x:Name="MainImage" Stretch="Uniform" />
+            </Canvas>
+        </Border>
+
+        <Grid Grid.Column="1" Margin="5,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button
+                    Width="100"
+                    Height="30"
+                    Margin="10,0"
+                    Background="DarkGreen"
+                    Click="Browse_Click"
+                    Content="浏览" />
+                <Button
+                    Width="100"
+                    Height="30"
+                    Margin="10,0"
+                    Background="DarkBlue"
+                    Click="Save_Click"
+                    Content="另存" />
+            </StackPanel>
+            <Border
+                Grid.Row="1"
+                Background="WhiteSmoke"
+                CornerRadius="4">
+                <Image
+                    x:Name="ResultImage"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Stretch="Uniform" />
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>
